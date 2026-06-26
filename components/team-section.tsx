@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 const team = [
   { name: "Santiago Mendez", role: "CEO" },
   { name: "Diego Hernandez Canetti", role: "CMO" },
@@ -31,6 +33,17 @@ export function TeamSection() {
             del agro que une tecnología y conocimiento rural. Promovemos una marca
             que no promete innovación: promete resultados.
           </p>
+        </div>
+
+        <div className="relative mt-12 overflow-hidden rounded-3xl border border-border/60">
+          <Image
+            src="/campo-vacas-dia.png"
+            alt="Ganado pastando en la llanura pampeana argentina"
+            width={1600}
+            height={700}
+            className="h-56 w-full object-cover md:h-80"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
         </div>
 
         <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">

@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { Moon, HeartPulse, Sprout, Users } from "lucide-react"
 
 const problems = [
@@ -39,7 +40,22 @@ export function ProblemSection() {
           </p>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="relative mt-12 overflow-hidden rounded-3xl border border-border/60">
+          <Image
+            src="/vacas-rodeo.png"
+            alt="Rodeo de ganado en campo abierto al atardecer"
+            width={1600}
+            height={700}
+            className="h-56 w-full object-cover md:h-72"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+          <p className="absolute bottom-0 left-0 max-w-xl p-6 text-pretty text-lg font-medium text-foreground md:p-8 md:text-xl">
+            Miles de hectáreas extensivas, expuestas día y noche, sin control
+            humano permanente.
+          </p>
+        </div>
+
+        <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {problems.map(({ icon: Icon, title, text }) => (
             <div
               key={title}
