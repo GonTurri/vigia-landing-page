@@ -50,18 +50,18 @@
 
 :root {
   color-scheme: light;
-  --background: oklch(0.985 0.006 255);
+  --background: oklch(0.945 0.012 255);
   --foreground: oklch(0.29 0.06 264);
-  --card: oklch(1 0 0);
+  --card: oklch(0.98 0.008 255);
   --card-foreground: oklch(0.29 0.06 264);
-  --popover: oklch(1 0 0);
+  --popover: oklch(0.98 0.008 255);
   --popover-foreground: oklch(0.29 0.06 264);
   --primary: oklch(0.63 0.16 350);
   --primary-foreground: oklch(0.99 0.005 350);
-  --secondary: oklch(0.93 0.025 264);
+  --secondary: oklch(0.9 0.03 264);
   --secondary-foreground: oklch(0.32 0.06 264);
-  --muted: oklch(0.95 0.012 264);
-  --muted-foreground: oklch(0.5 0.035 264);
+  --muted: oklch(0.91 0.02 264);
+  --muted-foreground: oklch(0.48 0.04 264);
   --accent: oklch(0.63 0.16 350);
   --accent-foreground: oklch(0.99 0.005 350);
   --destructive: oklch(0.6 0.2 25);
