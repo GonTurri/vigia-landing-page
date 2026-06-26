@@ -7,13 +7,14 @@ export function HeroSection() {
     <section id="inicio" className="relative overflow-hidden">
       <div className="absolute inset-0">
         <Image
-          src="/hero-cattle-night.png"
-          alt="Ganado en campo abierto durante la noche"
+          src="/campo-vacas-dia.png"
+          alt="Ganado pastando en el campo durante el día"
           fill
           priority
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/85 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/40" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-transparent to-background" />
       </div>
 
       <div className="relative mx-auto max-w-6xl px-4 py-24 md:py-32">
