@@ -3,21 +3,13 @@ import Image from "next/image"
 const team = [
   { name: "Santiago Mendez", role: "CEO" },
   { name: "Diego Hernandez Canetti", role: "CMO" },
+  { name: "Sofía Rabey Fischer", role: "CFO" },
   { name: "Uriel Grifman", role: "Desarrollador de Software" },
   { name: "Gonzalo Ivo Turri", role: "Desarrollador de Software" },
   { name: "Iñaki Joaquín Lorences", role: "Técnico de Campo" },
   { name: "Julián Cardoso Landin", role: "Técnico de Campo" },
   { name: "Matías Gabriel Jastrebow", role: "Asesor Contable y Legal" },
 ]
-
-function initials(name: string) {
-  return name
-    .split(" ")
-    .slice(0, 2)
-    .map((n) => n[0])
-    .join("")
-    .toUpperCase()
-}
 
 export function TeamSection() {
   return (
@@ -52,21 +44,21 @@ export function TeamSection() {
               key={member.name}
               className="flex flex-col items-center rounded-2xl border border-border/60 bg-card p-6 text-center"
             >
-              <span
-                className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/15 text-lg font-semibold text-primary"
-                aria-hidden="true"
-              >
-                {initials(member.name)}
-              </span>
+              <div className="relative h-16 w-16 overflow-hidden rounded-full border border-border/50">
+                <Image
+                  // Se usa el nombre encodeado para que el avatar sea siempre el mismo para cada persona
+                  src={`https://i.pravatar.cc/150?u=${encodeURIComponent(member.name)}`}
+                  alt={`Foto de perfil de ${member.name}`}
+                  width={64}
+                  height={64}
+                  className="object-cover"
+                />
+              </div>
               <h3 className="mt-4 text-sm font-medium text-card-foreground">{member.name}</h3>
               <p className="mt-1 text-xs text-muted-foreground">{member.role}</p>
             </div>
           ))}
         </div>
-
-        <p className="mt-8 text-center text-xs text-muted-foreground">
-          Imágenes del equipo próximamente. Los avatares actuales son provisorios.
-        </p>
       </div>
     </section>
   )
