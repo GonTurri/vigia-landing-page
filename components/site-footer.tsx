@@ -28,7 +28,7 @@ export function SiteFooter() {
             <VigiaLogo />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
               VigIA: vigilancia constante potenciada por Inteligencia Artificial.
-              Lo que no se VigIA, se pierde.
+              Lo que no se Vigila, se pierde.
             </p>
           </div>
 
