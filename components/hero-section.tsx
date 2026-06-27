@@ -23,8 +23,23 @@ export function HeroSection() {
             Monitoreo ganadero con Inteligencia Artificial
           </span>
 
-          <h1 className="mt-6 text-pretty text-4xl font-semibold leading-tight tracking-tight text-foreground md:text-6xl">
-            Lo que no se Vig<span className="text-primary">IA</span>, se pierde.
+          <h1 className="mt-6 text-pretty text-4xl font-semibold leading-tight tracking-tight text-foreground md:text-6xl flex flex-wrap items-center gap-x-2">
+            <span>Lo que no se</span>
+            <span className="inline-flex items-center">
+              {/* Logo reemplazando la V */}
+              <Image 
+                src="/vigia-logo.png" 
+                alt="Logo VigIA" 
+                width={48} 
+                height={48} 
+                className="inline-block h-[1em] w-auto mr-1 pb-1"
+                priority
+              />
+              ig
+              {/* La 'L' en color azul. Usaremos el color primary por defecto, si querías otro tono específico de azul, podés cambiar la clase 'text-blue-500' o similar */}
+              <span className="text-blue-600 font-bold mx-[1px]">I L A</span>
+            </span>
+            <span>se pierde.</span>
           </h1>
 
           <p className="mt-6 text-pretty text-lg leading-relaxed text-muted-foreground">
@@ -61,3 +76,12 @@ export function HeroSection() {
     </section>
   )
 }
+```eof
+
+### Consideraciones técnicas sobre este cambio:
+
+1.  **Alineación del Logo:** Transformé el `<h1>` en un *flexbox* (agregando `flex flex-wrap items-center gap-x-2`). Esto permite que el texto se adapte a distintas pantallas sin que el logo se desalinee.
+2.  **Tamaño del Logo Relativo:** Usé la clase `h-[1em] w-auto` en el logo. Esto es clave: hace que el logo tome automáticamente la misma altura que la fuente del texto que lo rodea (ya sea que se vea en celular o en un monitor 4K).
+3.  **Color Azul:** Agregué la clase de Tailwind `text-blue-600` a la frase "I L A". Si tu marca usa un azul en particular que tenés configurado como tu color primario en el `tailwind.config.ts`, podés cambiar ese `text-blue-600` por `text-primary`.
+
+Asegurate de que tu logo esté en la carpeta `public/` y se llame exactamente `/vigia-logo.png` (como usamos antes para la pestaña). Si el archivo del logo no tiene márgenes internos, debería encajar perfectamente en la oración.
