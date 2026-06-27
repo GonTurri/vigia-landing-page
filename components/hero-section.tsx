@@ -23,8 +23,19 @@ export function HeroSection() {
             Monitoreo ganadero con Inteligencia Artificial
           </span>
 
-          <h1 className="mt-6 text-pretty text-4xl font-semibold leading-tight tracking-tight text-foreground md:text-6xl">
-            Lo que no se Vig<span className="text-primary">I</span>l<span className="text-primary">A</span>, se pierde.
+          <h1 className="mt-6 text-pretty text-4xl font-semibold leading-tight tracking-tight text-foreground md:text-6xl flex flex-wrap items-center gap-x-2 lg:gap-x-3">
+            <span>Lo que no se</span>
+            <Image 
+              src="/texto-vigila.png" 
+              alt="Vigila" 
+              width={300} 
+              height={80} 
+              // h-[1em] hace que mida lo mismo que el texto. 
+              // pb-[0.1em] la centra verticalmente con la base de las otras letras.
+              className="inline-block h-[1em] w-auto translate-y-[0.1em]"
+              priority
+            />
+            <span><strong>se pierde.</strong></span>
           </h1>
 
           <p className="mt-6 text-pretty text-lg leading-relaxed text-muted-foreground">
