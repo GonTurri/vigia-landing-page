@@ -1,14 +1,46 @@
 import Image from "next/image"
 
 const team = [
-  { name: "Santiago Mendez", role: "CEO" },
-  { name: "Diego Hernandez Canetti", role: "CMO" },
-  { name: "Sofía Rabey Fischer", role: "CFO" },
-  { name: "Uriel Grifman", role: "Desarrollador de Software" },
-  { name: "Gonzalo Ivo Turri", role: "Desarrollador de Software" },
-  { name: "Iñaki Joaquín Lorences", role: "Técnico de Campo" },
-  { name: "Julián Cardoso Landin", role: "Técnico de Campo" },
-  { name: "Matías Gabriel Jastrebow", role: "Asesor Contable y Legal" },
+  { 
+    name: "Santiago Mendez", 
+    role: "CEO", 
+    image: "/team/santiago-mendez.jpg" 
+  },
+  { 
+    name: "Diego Hernandez Canetti", 
+    role: "CMO", 
+    image: "https://lh3.googleusercontent.com/a-/ALV-UjWAOm097ClmBN6A_YjTeu78iI7dmDdvROtnzO9ytLOaPSSHRHc=s48-p" 
+  },
+  { 
+    name: "Sofía Rabey Fischer", 
+    role: "CFO", 
+    image: "/team/sofia-rabey.jpg" 
+  },
+  { 
+    name: "Uriel Grifman", 
+    role: "Desarrollador de Software", 
+    image: "/team/uriel-grifman.jpg" 
+  },
+  { 
+    name: "Gonzalo Ivo Turri", 
+    role: "Desarrollador de Software", 
+    image: "/team/gonzalo-turri.jpg" 
+  },
+  { 
+    name: "Iñaki Joaquín Lorences", 
+    role: "Técnico de Campo", 
+    image: "/team/inaki-lorences.jpg" 
+  },
+  { 
+    name: "Julián Cardoso Landin", 
+    role: "Técnico de Campo", 
+    image: "/team/julian-cardoso.jpg" 
+  },
+  { 
+    name: "Matías Gabriel Jastrebow", 
+    role: "Asesor Contable y Legal", 
+    image: "/team/matias-jastrebow.jpg" 
+  },
 ]
 
 export function TeamSection() {
@@ -46,8 +78,7 @@ export function TeamSection() {
             >
               <div className="relative h-16 w-16 overflow-hidden rounded-full border border-border/50">
                 <Image
-                  // Se usa el nombre encodeado para que el avatar sea siempre el mismo para cada persona
-                  src={`https://i.pravatar.cc/150?u=${encodeURIComponent(member.name)}`}
+                  src={member.image}
                   alt={`Foto de perfil de ${member.name}`}
                   width={64}
                   height={64}
